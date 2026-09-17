@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\V1\TicketController;
 use App\Http\Controllers\AuthController;
 use App\Models\Ticket;
 use Illuminate\Http\Request;
@@ -15,4 +16,6 @@ Route::get('/user', function (Request $request) {
 Route::post('/login', [Authcontroller::class, 'login']);
 Route::post('/register', [Authcontroller::class, 'register']);
 
+
+Route::resource('tickets', TicketController::class);
 
